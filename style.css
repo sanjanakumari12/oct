@@ -1,86 +1,135 @@
-@import url("https://fonts.googleapis.com/css?family=Trirong");
-
-={
-    padding:0;
-    margin:0;
-    box-sizing:border-box;
-    font-family:"Trirong",serif;
+/* Reset default margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
 }
 
-header{
-    width:100%;
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0,2)), url(restro.jpeg);
+/* Styling for the body */
+body {
+    background-image: url(http://image.unsplash.com/photo-1506968430777-bf7784a87f23?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ix);
     background-size: cover;
+    background-position: center;
 }
 
-nav {
+/* Styling for the header */
+header {
     width: 100%;
-    height: 80px;
-    color: #fff;
+    position: sticky; 
+    top: 0;
+    z-index: 1; 
+    background: transparent; 
+}
+
+/* Styling for the container within the header */
+header .container {
+    height: 10vh; 
+    width: 100%; 
+    margin: 0 auto; 
+    padding: 0 50px;
+}
+
+/* Styling for the logo */
+.logo {
     display: flex;
-    justify-content: space-around;
-    text-decoration: solid;
+    gap: 14px; 
+    align-items: center; 
 }
 
-.logo{
-    font-size: 2rem;
-    letter-spacing: 2px;
+/* Styling for the logo image */
+.logo img {
+    height: 35px; 
+    width: 30px; 
 }
 
-.menu a{
-    text-decoration: none;
-    color: #fff;
-    padding: 10px 20px;
+/* Styling for the logo text */
+.logo p {
+    font-family: Georgia, 'Times New Roman', Times, serif; 
     font-size: 20px;
+    font-weight: 550; 
+    cursor: default; 
 }
 
-.menu a:hover{
-    border: 1px solid indianred;
+/* Styling for anchor tags */
+a {
+    text-decoration: none; 
+    color: palevioletred; 
 }
 
-.register{
-    text-decoration: none;
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 20px;
-    width: auto;
-    border-radius: 4px;
-    background: indianred;
+/* Styling for unordered lists */
+ul {
+    display: flex; 
+    gap: 14px; 
+    list-style: none; 
 }
 
-.register a:hover{
-    border: 1px solid indianred ;
+/* Styling for list items */
+li {
+    font-size: 20px; 
 }
 
-.h-text{
+/* Styling for the navigation */
+nav {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 14px; 
+}
+
+/* Styling for the main content */
+.main {
+    width: 100%; 
+    height: 90vh; 
+    position: absolute; 
+}
+
+/* Styling for the main image */
+.main img {
+    display: block; 
+    margin: auto; 
+    height: 100%; 
+    filter: drop-shadow(20px 20px 40px rgb(238, 235, 235)); 
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: rgb(247, 244, 244);
+    margin: auto;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    max-width: 650px;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
+    top: 0;
+    left: 0;
 }
 
-.h-text span{
-    letter-spacing: 5px;
+.content .container {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+    height: 100%;
 }
 
-.h-text h1{
-    font-size: 3.5rem;
+.todo {
+    cursor: url("quill.png") 6 19, auto;
+    display: flex;
+    padding: 14px;
 }
 
-.h-text a{
-    text-decoration: none;
-    color: #fff;
-    background: indianred;
-    padding: 10px 20px;
-    letter-spacing: 5px;
-    transition: 0.45s;
-}
-
-.h-text a:hover{
-    border: 1px solid indianred;
+.todo .value {
+    cursor: inherit;
     background: transparent;
+    border: none;
+    outline: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    flex-grow: 1;
+    border-bottom: 2px solid rgb(225, 221, 219);
 }
+
+.todo .todo_checkbox {
+    cursor: inherit;
+}
+
